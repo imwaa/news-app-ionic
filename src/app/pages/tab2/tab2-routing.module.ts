@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { Tab2Page } from './tab2.page';
+import { ExploreContainerComponentModule } from '../../explore-container/explore-container.module';
+
 
 const routes: Routes = [
   {
