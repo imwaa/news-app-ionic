@@ -9,11 +9,12 @@ import { NewsService } from 'src/app/services/news.service';
 })
 export class Tab1Page implements OnInit {
 
+  public articles: Article[] = [];
+
   constructor(private newsService: NewsService) {}
   
   ngOnInit(): void {
-      this.newsService.getTopHeadLines().subscribe((articles:Article[])=>{
-        console.log(articles)
-      })
+      this.newsService.getTopHeadLines()
+      .subscribe(articles => this.articles.push(...articles))
   }
 }
