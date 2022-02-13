@@ -1,4 +1,4 @@
-<ion-header [translucent]="true" mode="ios" class="ion-no-border">
+<ion-header [translucent]="false" mode="ios" class="ion-no-border">
   <ion-toolbar>
     <ion-title>
       News App
@@ -11,7 +11,11 @@
     <ion-toolbar>
       <ion-title size="large">News App</ion-title>
     </ion-toolbar>
+    <ion-toolbar>
+      <ion-searchbar mode="ios" class="ion-no-border"></ion-searchbar>
+    </ion-toolbar>
   </ion-header>
+
 
   <app-articles
   [articles]="articles"

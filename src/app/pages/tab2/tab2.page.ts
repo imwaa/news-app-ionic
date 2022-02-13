@@ -16,7 +16,8 @@ export class Tab2Page implements OnInit {
   constructor(private newService:NewsService) {}
 
   ngOnInit(): void {
-    this.newService.getTopHeadLinesByCategory(this.selectedCategory).subscribe(articles=>this.articles = [...this.articles, ...articles])
+    this.newService.getTopHeadLinesByCategory(this.selectedCategory).subscribe(articles=>
+      this.articles = [...articles])
   }
 
   segmentChanged(event: any){
